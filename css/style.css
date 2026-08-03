@@ -1,0 +1,275 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Mengaktifkan scroll halus saat menu diklik */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  background-color: #e9e5e5;
+  color: #130202;
+}
+
+/* --- NAVBAR (FIXED AGAR TETAP DI ATAS SAAT DI-SCROLL) --- */
+header.navbar-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(45, 62, 80, 0.95);
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+header.navbar-container .logo img {
+  width: 120px;
+  border-radius: 8px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #425c77;
+  color: white;
+}
+
+/* --- STYLING MASING-MASING SECTION --- */
+section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem 2rem; /* Padding atas agar tidak tertutup navbar fixed */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* --- HOME SECTION STYLING --- */
+#home .content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* Memaksa Teks Deskripsi dan Gambar Berada Samping-sampingan */
+#home .content-main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+#home .content-description {
+  flex: 1;
+}
+
+#home .content-description .title {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+}
+
+#home .content-description p {
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: #030000;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  border-radius: 999px;
+  margin-top: 1rem;
+  background-color: #2d3e50;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  transition: all 0.15s ease-in;
+}
+
+.btn-more:hover {
+  background-color: #425c77;
+}
+
+#home .content-image {
+  flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+}
+
+#home .content-image img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling Artikel Sejarah di Bawahnya */
+#home article {
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-left: 5px solid #2d3e50;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#home article h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #2d3e50;
+}
+
+#home article p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: #222222;
+  margin: 0;
+}
+
+/* Title untuk Section */
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid #425c77;
+  padding-bottom: 0.5rem;
+}
+
+/* --- MENU SECTION (KATALOG MOBIL) --- */
+.car-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  background-color: #084989;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 320px;
+}
+
+.car-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.car-card h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.spec-list {
+  padding-left: 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.spec-list li {
+  margin-bottom: 0.4rem;
+}
+
+/* --- PROFIL SECTION --- */
+.profile-card {
+  background-color: #2d3e50;
+  color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn-profile {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.8rem;
+  background-color: #425c77;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.btn-profile:hover {
+  background-color: #89b0d9;
+  color: #ece8e8;
+}
+
+/* --- ASIDE STYLING --- */
+aside.sidebar-info {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #ffffff;
+  border-left: 5px solid #084989;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+aside.sidebar-info h3 {
+  margin-top: 0;
+  color: #084989;
+}
+
+/* --- FOOTER --- */
+footer {
+  width: 100%;
+  background-color: #363636;
+  padding: 1.5rem 0;
+}
+
+footer .social-media ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+footer .social-media li a {
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.2s;
+}
+
+footer .social-media li a:hover {
+  color: #89b0d9;
+}
